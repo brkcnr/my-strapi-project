@@ -1,25 +1,26 @@
 /**
- * category router
+ * shop router
  */
 
 // import { factories } from '@strapi/strapi';
 
-// export default factories.createCoreRouter('api::category.category');
+// export default factories.createCoreRouter('api::shop.shop');
+
 
 export default {
     routes: [
       {
         method: 'GET',
-        path: '/categories',
-        handler: 'api::category.category.find',
+        path: '/shops',
+        handler: 'api::shop.shop.find',
         config: {
           auth: false,
         },
       },
       {
         method: 'GET',
-        path: '/categories/:id',
-        handler: 'api::category.category.findOne',
+        path: '/shops/:id',
+        handler: 'api::shop.shop.findOne',
         config: {
           auth: false,
         },

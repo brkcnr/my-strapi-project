@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "shops",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "Category"
+    "singularName": "shop",
+    "pluralName": "shops",
+    "displayName": "Shop"
   },
   "options": {
     "draftAndPublish": true
@@ -16,11 +16,14 @@
       "required": true,
       "unique": true
     },
-    "shops": {
+    "Description": {
+      "type": "richtext"
+    },
+    "categories": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::shop.shop",
-      "inversedBy": "categories"
+      "target": "api::category.category",
+      "mappedBy": "shops"
     }
   }
 }
